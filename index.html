@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Random Color Redirect</title>
+<script>
+    // 1. УБЕДИТЕСЬ, ЧТО ЭТИ ИМЕНА СОВПАДАЮТ С ВАШИМИ ФАЙЛАМИ
+    const images = ['color1.png', 'color2.png', 'color3.png']; 
+    
+    const randomIndex = Math.floor(Math.random() * images.length);
+    const randomImage = images[randomIndex];
+
+    const timestamp = new Date().getTime();
+
+    // Перенаправление с параметром для обхода кэширования Firefox
+    window.location.replace(randomImage + '?t=' + timestamp);
+</script>
+</head>
+<body>
+    <p>Redirecting to a random color...</p>
+</body>
+</html>
